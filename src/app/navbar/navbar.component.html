@@ -1,0 +1,18 @@
+<mat-toolbar color='primary' >
+    <div routerLink=''>Home</div>
+    <img src="/assets/logo.svg" id="logo" alt="" srcset="">
+    <mat-icon id="shopicon" fxLayoutAlign="end">shopping_cart</mat-icon>
+    <div fxFlex fxLayoutAlign="end" fxShow="true" fxShow.xs="false">
+        <ul flex fxLayoutGap="15px" class="navigation-items">
+            <li fxFlex > <a color='accent' routerLink='admin'>Admin Actions</a></li>
+            <li fxFlex> <a routerLink='cart'>Cart</a></li>
+            <li fxFlex> <a routerLink='products/:id'>Products</a></li>
+        </ul>
+    </div>
+
+    <div  fxHide.gt-xs>
+        <button mat-icon-button (click)= onToggleSidenav()>
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
